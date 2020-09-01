@@ -1,0 +1,19 @@
+	<%= error_messages_for(f.object)  %>
+		
+
+	<table class="table table-striped">
+		
+			<tr>
+				<td><%= f.label("Name")%></td><td><%=f.text_field(:name)%></td>
+			</tr>
+			<tr>
+				<td><%= f.label("Position")%></td><td><%=f.text_field(:position)%></td>
+			</tr>
+			<tr>
+				<td><%= f.label("Visible")%></td><td><%=f.radio_button(:visible,"true")%><%=f.label("Yes ")%>
+					
+					<%=f.radio_button(:visible,"false")%><%=f.label("No ")%>
+				</td>
+			</tr>
+			
+	</table> 

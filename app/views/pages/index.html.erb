@@ -1,0 +1,48 @@
+<div id="con">
+	
+<div class="container-fluid p-3 bg-dark text-white">
+	<h1 align="center">My Test Application</h1>
+	<%= link_to("<Home>",:controller=>'access',:action=>'menu')%>
+		<div class="container admin_color" align="right">Logged in as :<%=$name%>  </div>
+</div>
+<div>
+	<%= link_to("create_new_record",:controller=>'pages',:action=>'new')%>
+</div>
+<div class="container">
+	<table class="table table-hover">
+		<thead>
+		  <tr>
+		  		<th>#</th>
+		  		<th>Page</th>
+		  		<th>Permalink</th>
+		  		<th>Subject No</th>
+		  		<th>Visible</th>
+		  		<th>Created</th>
+		  		<th>Updated</th>
+		  		
+		  </tr>	
+		</thead>
+		  <% @pages.each do |page|%>
+		  <tr>
+		  		<td><%=page.position%></td>
+		  		<td><%=page.name%></td>
+		  		<td><%=page.permalink%></td>
+		  		<td><%=page.subject_id %></td>
+		  		<td><%= status_tag(page.visible)%></td>
+		  		<td><%=page.created_at.strftime("%b %d,%Y %H:%M")%></td>
+		  		
+		  		<td><%=page.updated_at.strftime("%b %d,%Y %H:%M")%></td>
+		  		<td>
+		  			<%=link_to("Show",page_path(page))%>
+		  			<%=link_to("Edit",edit_page_path(page))%>
+		  			<%=link_to("Delete",delete_page_path(page))%>
+		  		</td>
+		  </tr>
+		  <%end%>
+		</table>	
+</div>
+
+<footer id="footer">
+  <div id="footer-content">Sticky Nibin</div>
+</footer>
+</div>

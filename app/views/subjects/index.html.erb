@@ -1,0 +1,42 @@
+<div id="con">
+	
+<div class="container-fluid p-3 bg-dark text-white">
+	<h1 align="center">My Test Application</h1>
+	<%= link_to("<Home>",:controller=>'access',:action=>'menu')%>
+		<div class="container admin_color" align="right">Logged in as :<%=$name%>  </div>
+</div>
+<div>
+	<%= link_to("create_new_record",:controller=>'subjects',:action=>'new')%>
+</div>
+<div class="container">
+	<table class="table table-hover">
+		<thead class="tb_header">
+		  <tr>
+		  		<th>#</th>
+		  		<th>Subject</th>
+		  		<th>Visible</th>
+		  		<th>Pages</th>
+		  		<th>Actions</th>
+
+		  </tr>	
+		</thead>
+		  <% @subjects.each do |subject|%>
+		  <tr>
+		  		<td><%=subject.position%></td>
+		  		<td><%=subject.name%></td>
+		  		<td><%= status_tag(subject.visible)%></td>
+		  		<td><%=subject.page.length %></td>
+		  		<td>
+		  			<%=link_to("Show",subject_path(subject))%>
+		  			<%=link_to("Edit",edit_subject_path(subject))%>
+		  			<%=link_to("Delete",delete_subject_path(subject))%>
+		  		</td>
+		  </tr>
+		  <%end%>
+		</table>	
+</div>
+
+<footer id="footer">
+  <div id="footer-content">Sticky Footer</div>
+</footer>
+</div>

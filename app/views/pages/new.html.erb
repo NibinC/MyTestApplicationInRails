@@ -1,0 +1,25 @@
+<div id="con">
+<div class="container-fluid p-3 bg-dark text-white">
+	<h1 align="center">My Test Application</h1>
+<%= link_to("<Home>",:controller=>'access',:action=>'menu')%>
+		<div class="container admin_color" align="right">Logged in as :<%=$name%>  </div>
+</div>
+<div>
+<%= link_to("<<<Back",pages_path)%>
+</div>
+
+<div class="container">
+	<%= form_for(@page) do |f|%>
+
+		
+		<%= render(:partial=>'page_form',:locals=>{:f=>f})%>
+	<div class="justify-content-center" align="center">
+		<%=f.submit("Create")%>
+	 </div>
+	 	
+	<% end%>
+</div>
+<footer id="footer">
+  <div id="footer-content">Sticky Nibin</div>
+</footer>
+</div>

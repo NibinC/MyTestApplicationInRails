@@ -1,0 +1,19 @@
+	<%= error_messages_for(f.object)%>
+
+	<table class="table table-striped">
+		
+			<tr>
+				<td><%= f.label("First Name")%></td><td><%=f.text_field(:first_name)%></td>
+			</tr>
+			<tr>
+				<td><%= f.label("Last Name")%></td><td><%=f.text_field(:last_name)%></td>
+			</tr>
+			<tr>
+				<td><%= f.label("User Name")%></td><td><%=f.text_field(:username)%></td>
+			</tr><tr>
+				<td><%= f.label("Password")%></td><td><%=f.text_field(:password)%></td>
+			</tr>	
+				
+			
+			
+	</table> 
