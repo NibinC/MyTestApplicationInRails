@@ -5,12 +5,12 @@
 		<div class="container admin_color" align="right">Logged in as :<%=$name%>  </div>
 </div>
 <div>
-<%= link_to("<<<Back",pages_path)%>
+<%= link_to("<<<Back",pages_path(:subject_id=>@subject.id))%>
 </div>
 <div class="container">
 	
 	<div align="center"><b>Delete Record</b></div>
-	<%= form_for(@page, :method=>'delete') do |f|%>
+	<%= form_for(@page,:url=>page_path(:subject_id=>@subject.id), :method=>'delete') do |f|%>
 	<table class="table table-striped">
 		<thead><th>You Really want to delete <%=f.label(@page.name)%></th></thead>
 		<tr><td><%=f.submit("Delete")%></td></tr>

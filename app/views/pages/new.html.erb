@@ -5,11 +5,11 @@
 		<div class="container admin_color" align="right">Logged in as :<%=$name%>  </div>
 </div>
 <div>
-<%= link_to("<<<Back",pages_path)%>
+<%= link_to("<<<Back",pages_path(:subject_id=>@subject.id))%>
 </div>
 
 <div class="container">
-	<%= form_for(@page) do |f|%>
+	<%= form_for(@page,:url=>pages_path(:subject_id=>@subject.id)) do |f|%>
 
 		
 		<%= render(:partial=>'page_form',:locals=>{:f=>f})%>
