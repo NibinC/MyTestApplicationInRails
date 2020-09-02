@@ -14,6 +14,7 @@ class AdminUsersController < ApplicationController
     @admins = AdminUser.new(admins_params)
     if(@admins.save)
       flash[:notice]="Profile created successfully"
+      UserMailer.with(user: @admins).welcome_mail.deliver_now   
       redirect_to(admin_users_path)
     else
       render 'new'
@@ -54,7 +55,7 @@ class AdminUsersController < ApplicationController
 
   private
   def admins_params
-    params.require(:admin_user).permit(:first_name,:last_name,:username,:password)
+    params.require(:admin_user).permit(:first_name,:last_name,:email,:username,:password)
   end  
 end
 
