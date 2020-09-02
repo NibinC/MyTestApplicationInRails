@@ -1,7 +1,8 @@
 class PagesController < ApplicationController
  before_action :confirm_logged_in
+ before_action :find_subject
   def index
-    @pages = Page.all.order("position asc")
+    @pages = @subject.page.order("position asc")
   end
 
   def show
@@ -9,14 +10,14 @@ class PagesController < ApplicationController
   end
 
   def new
-    @page = Page.new
+    @page = Page.new(:subject_id=>@subject.id)
   end
   
   def create
-    @page = Page.new(pages_params)
+    @page = Page.new(pages_params) 
     if(@page.save)
       flash[:notice]="Page created succussfully"
-      redirect_to(pages_path)
+      redirect_to(pages_path(:subject_id=>@subject.id))
     else
       render('new')
     end
@@ -30,7 +31,7 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
     if(@page.update_attributes(pages_params))
       flash[:notice]="Page Updated succussfully"
-      redirect_to(pages_path)
+      redirect_to(pages_path(:subject_id=>@subject.id))
     else
       render('edit')
     end
@@ -46,7 +47,7 @@ class PagesController < ApplicationController
     if(@page)
       @page.destroy
       flash[:notice]="Page deleted succussfully"
-      redirect_to(pages_path)
+      redirect_to(pages_path(:subject_id=>@subject.id))
     else
       render('delete')
     end
@@ -55,5 +56,7 @@ class PagesController < ApplicationController
   def pages_params
     params.require(:page).permit(:subject_id,:name,:permalink,:position,:visible)
   end
-
+  def find_subject
+    @subject = Subject.find(params[:subject_id])
+  end  
 end

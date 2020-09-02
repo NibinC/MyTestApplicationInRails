@@ -5,10 +5,10 @@
 		<div class="container admin_color" align="right">Logged in as :<%=$name%>  </div>
 </div>
 <div>
-<%= link_to("<<<Back",pages_path)%>
+<%= link_to("<<<Back",pages_path(:subject_id=>@subject.id))%>
 </div>
 <div class="container">
-	<%= form_for(@page) do |f|%>
+	<%= form_for(@page,:url=>page_path(:subject_id=>@subject.id)) do |f|%>
 	<div align="center"><b>UPDATE FORM</b></div>
 	<%= render(:partial=>'page_form',:locals=>{:f=>f})%>
 	<div class="justify-content-center" align="center">

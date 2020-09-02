@@ -2,10 +2,11 @@
 <div class="container-fluid p-3 bg-dark text-white">
 	<h1 align="center">My Test Application</h1>
 <%= link_to("<Home>",:controller=>'access',:action=>'menu')%>
+
 		<div class="container admin_color" align="right">Logged in as :<%=$name%>  </div>
 </div>
 <div>
-<%= link_to("<<<Back",pages_path)%>
+<%= link_to("<<<Back",pages_path(:subject_id=>@subject.id))%>
 </div>
 <div class="container">
 	<table class="table table-striped">

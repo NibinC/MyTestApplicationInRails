@@ -3,10 +3,11 @@
 <div class="container-fluid p-3 bg-dark text-white">
 	<h1 align="center">My Test Application</h1>
 	<%= link_to("<Home>",:controller=>'access',:action=>'menu')%>
+	<%= link_to("<Back to Subject>",subjects_path)%>	
 		<div class="container admin_color" align="right">Logged in as :<%=$name%>  </div>
 </div>
 <div>
-	<%= link_to("create_new_record",:controller=>'pages',:action=>'new')%>
+	<%= link_to("create_new_page",new_page_path(:subject_id=>@subject.id))%>
 </div>
 <div class="container">
 	<table class="table table-hover">
@@ -33,9 +34,9 @@
 		  		
 		  		<td><%=page.updated_at.strftime("%b %d,%Y %H:%M")%></td>
 		  		<td>
-		  			<%=link_to("Show",page_path(page))%>
-		  			<%=link_to("Edit",edit_page_path(page))%>
-		  			<%=link_to("Delete",delete_page_path(page))%>
+		  			<%=link_to("Show",page_path(page,:subject_id=>@subject.id))%>
+		  			<%=link_to("Edit",edit_page_path(page,:subject_id=>@subject.id))%>
+		  			<%=link_to("Delete",delete_page_path(page,:subject_id=>@subject.id))%>
 		  		</td>
 		  </tr>
 		  <%end%>
