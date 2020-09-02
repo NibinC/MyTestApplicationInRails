@@ -19940,3 +19940,1532 @@ Processing by AdminUsersController#index as HTML
 Completed 200 OK in 154ms (Views: 152.4ms | ActiveRecord: 0.8ms | Allocations: 20758)
 
 
+Started GET "/subjects" for ::1 at 2020-09-02 10:07:50 -0400
+  [1m[35m (1.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SubjectsController#index as HTML
+Redirected to http://localhost:3000/access/login
+Filter chain halted as :confirm_logged_in rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 411)
+
+
+Started GET "/access/login" for ::1 at 2020-09-02 10:07:51 -0400
+Processing by AccessController#login as HTML
+  Rendering access/login.html.erb within layouts/application
+  Rendered access/login.html.erb within layouts/application (Duration: 6.1ms | Allocations: 829)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_layouts_application_html_erb__722704921_97546320 at C:/Work/CodeTest/MyApp/app/views/layouts/application.html.erb:8)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4998ms (Views: 4966.3ms | ActiveRecord: 0.0ms | Allocations: 129882)
+
+
+Started GET "/access/styles.css" for ::1 at 2020-09-02 10:07:56 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/access/styles.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/access/attempt_login" for ::1 at 2020-09-02 10:08:01 -0400
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"authenticity_token"=>"THFpb+kuYxojGAwWGuSqV0RG3cvWf8dCrIn0ifftFQTdIm5nAoe3sGQJO9PKzxKoO0gEREI+rI45CoqFLWhINA==", "username"=>"Nchamayil", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`username` = 'Nchamayil' ORDER BY `admin_users`.`id` ASC LIMIT 1[0m
+  ↳ app/controllers/access_controller.rb:15:in `attempt_login'
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 214ms (ActiveRecord: 4.0ms | Allocations: 9542)
+
+
+Started GET "/admin" for ::1 at 2020-09-02 10:08:02 -0400
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/application
+  Rendered access/menu.html.erb within layouts/application (Duration: 1.7ms | Allocations: 318)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 99.7ms | ActiveRecord: 0.0ms | Allocations: 19903)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 10:08:04 -0400
+Processing by SubjectsController#index as HTML
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 1901)
+
+
+  
+ArgumentError (:page parameter required):
+  
+app/controllers/subjects_controller.rb:7:in `index'
+Started GET "/subjects" for ::1 at 2020-09-02 10:16:02 -0400
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.3ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 7[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 98.2ms | Allocations: 28858)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 198ms (Views: 185.6ms | ActiveRecord: 6.8ms | Allocations: 50060)
+
+
+Started GET "/subjects?page=2" for ::1 at 2020-09-02 10:16:11 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 5 OFFSET 5[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 8[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2386)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.7ms | Allocations: 21952)
+
+
+Started GET "/subjects?page=1" for ::1 at 2020-09-02 10:16:14 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 5 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 7[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 7332)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 78.8ms | ActiveRecord: 1.9ms | Allocations: 26903)
+
+
+Started GET "/subjects?page=1" for ::1 at 2020-09-02 10:17:25 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 2 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 27.2ms | Allocations: 17054)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 88.5ms | ActiveRecord: 7.5ms | Allocations: 37712)
+
+
+Started GET "/subjects?page=2" for ::1 at 2020-09-02 10:17:32 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 2 OFFSET 2[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 4457)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 77.2ms | ActiveRecord: 1.3ms | Allocations: 24036)
+
+
+Started GET "/subjects?page=3" for ::1 at 2020-09-02 10:17:34 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 2 OFFSET 4[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 7[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 8[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 4321)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 75.8ms | ActiveRecord: 1.5ms | Allocations: 23870)
+
+
+Started GET "/subjects?page=2" for ::1 at 2020-09-02 10:17:39 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 2 OFFSET 2[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 4449)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 75.5ms | ActiveRecord: 1.3ms | Allocations: 24007)
+
+
+Started GET "/subjects?page=1" for ::1 at 2020-09-02 10:17:39 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 2 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 4400)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 77ms (Views: 75.5ms | ActiveRecord: 1.2ms | Allocations: 23973)
+
+
+Started GET "/subjects?page=1" for ::1 at 2020-09-02 10:18:01 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 28.3ms | Allocations: 18963)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 124ms (Views: 115.2ms | ActiveRecord: 4.1ms | Allocations: 39610)
+
+
+Started GET "/subjects?page=2" for ::1 at 2020-09-02 10:18:06 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 4[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 7[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 8[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3385)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 74ms (Views: 72.2ms | ActiveRecord: 1.0ms | Allocations: 22963)
+
+
+Started GET "/subjects?page=1" for ::1 at 2020-09-02 10:18:08 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 6311)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 79.5ms | ActiveRecord: 2.0ms | Allocations: 25875)
+
+
+Started GET "/admin" for ::1 at 2020-09-02 10:20:12 -0400
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/application
+  Rendered access/menu.html.erb within layouts/application (Duration: 1.1ms | Allocations: 310)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 79ms (Views: 76.5ms | ActiveRecord: 0.0ms | Allocations: 20562)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 10:20:14 -0400
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 31.6ms | Allocations: 19344)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 114ms (Views: 101.9ms | ActiveRecord: 4.6ms | Allocations: 40134)
+
+
+Started GET "/pages?subject_id=2" for ::1 at 2020-09-02 10:20:16 -0400
+Processing by PagesController#index as HTML
+  Parameters: {"subject_id"=>"2"}
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/pages_controller.rb:60:in `find_subject'
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2 ORDER BY position asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/pages/index.html.erb:30
+  Rendered pages/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1360)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 89ms (Views: 83.2ms | ActiveRecord: 1.2ms | Allocations: 22219)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 10:20:42 -0400
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 6323)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 82ms (Views: 78.9ms | ActiveRecord: 1.9ms | Allocations: 25896)
+
+
+Started GET "/pages?subject_id=2" for ::1 at 2020-09-02 10:20:46 -0400
+Processing by PagesController#index as HTML
+  Parameters: {"subject_id"=>"2"}
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/pages_controller.rb:60:in `find_subject'
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2 ORDER BY position asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/pages/index.html.erb:30
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 894)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 72.9ms | ActiveRecord: 0.7ms | Allocations: 21272)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 10:20:49 -0400
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.5ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 6310)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 79.6ms | ActiveRecord: 2.0ms | Allocations: 25880)
+
+
+Started GET "/pages?subject_id=3" for ::1 at 2020-09-02 10:20:52 -0400
+Processing by PagesController#index as HTML
+  Parameters: {"subject_id"=>"3"}
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/pages_controller.rb:60:in `find_subject'
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3 ORDER BY position asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/pages/index.html.erb:30
+  Rendered pages/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1453)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 88ms (Views: 84.1ms | ActiveRecord: 0.9ms | Allocations: 21829)
+
+
+Started GET "/pages?subject_id=3" for ::1 at 2020-09-02 10:22:08 -0400
+Processing by PagesController#index as HTML
+  Parameters: {"subject_id"=>"3"}
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/pages_controller.rb:60:in `find_subject'
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3 ORDER BY position asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/pages/index.html.erb:27
+  Rendered pages/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1879)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 100ms (Views: 94.3ms | ActiveRecord: 0.7ms | Allocations: 22941)
+
+
+Started GET "/pages?subject_id=3" for ::1 at 2020-09-02 10:22:31 -0400
+Processing by PagesController#index as HTML
+  Parameters: {"subject_id"=>"3"}
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/pages_controller.rb:60:in `find_subject'
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPage Load (27.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3 ORDER BY position asc LIMIT 1 OFFSET 0[0m
+  ↳ app/views/pages/index.html.erb:27
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/pages/index.html.erb:46
+  Rendered pages/index.html.erb within layouts/application (Duration: 45.9ms | Allocations: 9020)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 150ms (Views: 103.2ms | ActiveRecord: 30.7ms | Allocations: 36406)
+
+
+Started GET "/admin" for ::1 at 2020-09-02 10:24:12 -0400
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/application
+  Rendered access/menu.html.erb within layouts/application (Duration: 1.3ms | Allocations: 310)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 73.2ms | ActiveRecord: 0.0ms | Allocations: 20565)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 10:24:15 -0400
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 27.1ms | Allocations: 19343)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 92.3ms | ActiveRecord: 4.0ms | Allocations: 40115)
+
+
+Started GET "/admin" for ::1 at 2020-09-02 10:24:19 -0400
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/application
+  Rendered access/menu.html.erb within layouts/application (Duration: 0.4ms | Allocations: 110)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 70.7ms | ActiveRecord: 0.0ms | Allocations: 19622)
+
+
+Started GET "/admin" for ::1 at 2020-09-02 10:25:06 -0400
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/application
+  Rendered access/menu.html.erb within layouts/application (Duration: 1.2ms | Allocations: 313)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 82.8ms | ActiveRecord: 0.0ms | Allocations: 20503)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 10:25:13 -0400
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 6705)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 83ms (Views: 79.2ms | ActiveRecord: 1.7ms | Allocations: 26570)
+
+
+Started GET "/pages?subject_id=2" for ::1 at 2020-09-02 10:25:16 -0400
+Processing by PagesController#index as HTML
+  Parameters: {"subject_id"=>"2"}
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/pages_controller.rb:60:in `find_subject'
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2 ORDER BY position asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/pages/index.html.erb:27
+  Rendered pages/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1330)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 78ms (Views: 73.0ms | ActiveRecord: 0.8ms | Allocations: 22193)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 10:25:19 -0400
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 6323)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 85ms (Views: 81.9ms | ActiveRecord: 2.0ms | Allocations: 25890)
+
+
+Started GET "/admin" for ::1 at 2020-09-02 10:26:07 -0400
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/application
+  Rendered access/menu.html.erb within layouts/application (Duration: 0.4ms | Allocations: 115)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 71.5ms | ActiveRecord: 0.0ms | Allocations: 19614)
+
+
+Started GET "/admin_users" for ::1 at 2020-09-02 10:26:33 -0400
+Processing by AdminUsersController#index as HTML
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` ORDER BY created_at asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/admin_users/index.html.erb:26
+  Rendered admin_users/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 7611)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 102ms (Views: 95.1ms | ActiveRecord: 1.6ms | Allocations: 28307)
+
+
+Started GET "/admin" for ::1 at 2020-09-02 10:26:39 -0400
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/application
+  Rendered access/menu.html.erb within layouts/application (Duration: 0.4ms | Allocations: 115)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 67.7ms | ActiveRecord: 0.0ms | Allocations: 19627)
+
+
+Started GET "/sections" for ::1 at 2020-09-02 10:26:42 -0400
+Processing by SectionsController#index as HTML
+  Rendering sections/index.html.erb within layouts/application
+  Rendered sections/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 72ms (Views: 70.3ms | ActiveRecord: 0.0ms | Allocations: 19946)
+
+
+Started GET "/styles.css" for ::1 at 2020-09-02 10:26:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/subjects" for ::1 at 2020-09-02 10:27:04 -0400
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 6322)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 78.7ms | ActiveRecord: 1.8ms | Allocations: 25886)
+
+
+Started GET "/pages?subject_id=2" for ::1 at 2020-09-02 10:27:13 -0400
+Processing by PagesController#index as HTML
+  Parameters: {"subject_id"=>"2"}
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/pages_controller.rb:60:in `find_subject'
+  Rendering pages/index.html.erb within layouts/application
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2 ORDER BY position asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/pages/index.html.erb:27
+  Rendered pages/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 904)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 87.3ms | ActiveRecord: 0.8ms | Allocations: 21291)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 10:27:15 -0400
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.2ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 6310)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 84ms (Views: 81.3ms | ActiveRecord: 1.7ms | Allocations: 25873)
+
+
+Started GET "/subjects/2" for ::1 at 2020-09-02 10:27:17 -0400
+Processing by SubjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:11:in `show'
+  Rendering subjects/show.html.erb within layouts/application
+  Rendered subjects/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 364)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 69.6ms | ActiveRecord: 0.4ms | Allocations: 20648)
+
+
+Started GET "/admin" for ::1 at 2020-09-02 10:27:20 -0400
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/application
+  Rendered access/menu.html.erb within layouts/application (Duration: 0.3ms | Allocations: 115)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.0ms | Allocations: 19606)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 10:33:04 -0400
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (7.4ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 194.2ms | Allocations: 28836)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 634ms (Views: 567.2ms | ActiveRecord: 21.8ms | Allocations: 79749)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 11:51:10 -0400
+  [1m[35m (2.6ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (34.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (7.0ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.9ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.9ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.8ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 114.2ms | Allocations: 6709)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_layouts_application_html_erb__248763260_75255760 at C:/Work/CodeTest/MyApp/app/views/layouts/application.html.erb:8)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6613ms (Views: 6548.9ms | ActiveRecord: 45.3ms | Allocations: 89575)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 11:52:57 -0400
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (1.1ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 26.2ms | Allocations: 6333)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 3332ms (Views: 3326.4ms | ActiveRecord: 4.3ms | Allocations: 80926)
+
+
+Started GET "/subjects?page=2" for ::1 at 2020-09-02 11:57:08 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 4[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.8ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 7[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 8[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 3395)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 209ms (Views: 204.6ms | ActiveRecord: 2.4ms | Allocations: 22966)
+
+
+Started GET "/subjects?page=1" for ::1 at 2020-09-02 11:57:15 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (1.1ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 24.3ms | Allocations: 6321)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 187ms (Views: 181.5ms | ActiveRecord: 4.1ms | Allocations: 25900)
+
+
+Started GET "/subjects/6/edit" for ::1 at 2020-09-02 11:57:20 -0400
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:31:in `edit'
+  Rendering subjects/edit.html.erb within layouts/application
+  Rendered application/_error_messages.html.erb (Duration: 1.9ms | Allocations: 207)
+  Rendered subjects/_form.html.erb (Duration: 60.0ms | Allocations: 3022)
+  Rendered subjects/edit.html.erb within layouts/application (Duration: 69.7ms | Allocations: 3955)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 257ms (Views: 247.6ms | ActiveRecord: 1.0ms | Allocations: 24373)
+
+
+Started PATCH "/subjects/6" for ::1 at 2020-09-02 11:57:24 -0400
+Processing by SubjectsController#update as HTML
+  Parameters: {"authenticity_token"=>"oL+Jb8mXa5SaZvCjCjDees5XhF8xPMLKo+oR3pK0t3EFTw9YZULPwg27763lbsyS0/L8buHKeIdcQ1azII+Nfg==", "subject"=>{"name"=>"Babu", "position"=>"4", "visible"=>"false"}, "commit"=>"Update", "id"=>"6"}
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/subjects_controller.rb:35:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at C:/Work/CodeTest/MyApp/app/controllers/subjects_controller.rb:37)
+  [1m[35m (4.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/subjects_controller.rb:37:in `update'
+  [1m[36mSubject Update (7.8ms)[0m  [1m[33mUPDATE `subjects` SET `subjects`.`visible` = FALSE, `subjects`.`updated_at` = '2020-09-02 15:57:24.858123' WHERE `subjects`.`id` = 6[0m
+  ↳ app/controllers/subjects_controller.rb:37:in `update'
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/subjects_controller.rb:37:in `update'
+Redirected to http://localhost:3000/subjects
+Completed 302 Found in 36ms (ActiveRecord: 16.5ms | Allocations: 4232)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 11:57:24 -0400
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.9ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (1.1ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.9ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 29.7ms | Allocations: 6322)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 218ms (Views: 211.9ms | ActiveRecord: 4.6ms | Allocations: 25911)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 11:57:29 -0400
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.1ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 28.5ms | Allocations: 6310)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 226ms (Views: 220.2ms | ActiveRecord: 4.1ms | Allocations: 25863)
+
+
+Started GET "/subjects?page=2" for ::1 at 2020-09-02 11:58:08 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 4[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 7[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 8[0m
+  ↳ app/views/subjects/index.html.erb:30
+  Rendered subjects/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 3385)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 198ms (Views: 194.5ms | ActiveRecord: 2.2ms | Allocations: 22953)
+
+
+Started GET "/subjects?page=1" for ::1 at 2020-09-02 11:58:11 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.7ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.6ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.5ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.8ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 24.0ms | Allocations: 6311)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 173ms (Views: 167.7ms | ActiveRecord: 3.9ms | Allocations: 25876)
+
+
+  [1m[35m (1.1ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (4.7ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT GET_LOCK('7864839756650184315', 0)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to AddEmailToAdminUser (20200902160604)
+  [1m[35m (6.3ms)[0m  [1m[35mALTER TABLE `admin_users` ADD `email` varchar(255)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT RELEASE_LOCK('7864839756650184315')[0m
+Started GET "/subjects" for ::1 at 2020-09-02 12:12:27 -0400
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (1.0ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (1.7ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.8ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.8ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.8ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 65.9ms | Allocations: 19225)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 264ms (Views: 241.2ms | ActiveRecord: 5.9ms | Allocations: 40396)
+
+
+Started GET "/admin" for ::1 at 2020-09-02 12:12:32 -0400
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/application
+  Rendered access/menu.html.erb within layouts/application (Duration: 2.6ms | Allocations: 320)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 201ms (Views: 195.9ms | ActiveRecord: 0.0ms | Allocations: 20172)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 12:12:48 -0400
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 25.9ms | Allocations: 6323)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 139ms (Views: 133.0ms | ActiveRecord: 4.3ms | Allocations: 25890)
+
+
+Started GET "/subjects" for ::1 at 2020-09-02 12:12:56 -0400
+Processing by SubjectsController#index as HTML
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (0.8ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.9ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.7ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (0.9ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 31.3ms | Allocations: 6310)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 225ms (Views: 219.3ms | ActiveRecord: 4.7ms | Allocations: 25882)
+
+
+Started GET "/admin" for ::1 at 2020-09-02 12:13:08 -0400
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/application
+  Rendered access/menu.html.erb within layouts/application (Duration: 0.4ms | Allocations: 107)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 186ms (Views: 184.7ms | ActiveRecord: 0.0ms | Allocations: 19602)
+
+
+Started GET "/admin_users" for ::1 at 2020-09-02 12:13:10 -0400
+Processing by AdminUsersController#index as HTML
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mAdminUser Load (7.1ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` ORDER BY created_at asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/admin_users/index.html.erb:26
+  Rendered admin_users/index.html.erb within layouts/application (Duration: 32.3ms | Allocations: 7803)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 212ms (Views: 190.7ms | ActiveRecord: 9.3ms | Allocations: 28518)
+
+
+Started GET "/admin_users" for ::1 at 2020-09-02 12:30:25 -0400
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by AdminUsersController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 760)
+
+
+  
+SyntaxError (C:/Work/CodeTest/MyApp/app/models/admin_user.rb:27: syntax error, unexpected =>, expecting keyword_end
+				  :format=>{:with=>EMAIL_REGX}	
+				         ^~):
+  
+app/models/admin_user.rb:27: syntax error, unexpected =>, expecting keyword_end
+app/models/admin_user.rb:27: syntax error, unexpected =>, expecting keyword_end
+app/models/admin_user.rb:27: syntax error, unexpected =>, expecting keyword_end
+app/controllers/admin_users_controller.rb:4:in `index'
+Started GET "/admin_users" for ::1 at 2020-09-02 12:32:35 -0400
+Processing by AdminUsersController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 758)
+
+
+  
+SyntaxError (C:/Work/CodeTest/MyApp/app/models/admin_user.rb:26: syntax error, unexpected =>, expecting keyword_end
+				  :format=>{:with=>EMAIL_REGX}	
+				         ^~):
+  
+app/models/admin_user.rb:26: syntax error, unexpected =>, expecting keyword_end
+app/models/admin_user.rb:26: syntax error, unexpected =>, expecting keyword_end
+app/models/admin_user.rb:26: syntax error, unexpected =>, expecting keyword_end
+app/controllers/admin_users_controller.rb:4:in `index'
+Started GET "/admin_users" for ::1 at 2020-09-02 12:35:01 -0400
+Processing by AdminUsersController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 752)
+
+
+  
+SyntaxError (C:/Work/CodeTest/MyApp/app/models/admin_user.rb:25: syntax error, unexpected =>, expecting keyword_end
+				  :format=>{:with=>EMAIL_REGX}	
+				         ^~):
+  
+app/models/admin_user.rb:25: syntax error, unexpected =>, expecting keyword_end
+app/models/admin_user.rb:25: syntax error, unexpected =>, expecting keyword_end
+app/models/admin_user.rb:25: syntax error, unexpected =>, expecting keyword_end
+app/controllers/admin_users_controller.rb:4:in `index'
+Started GET "/admin_users" for ::1 at 2020-09-02 12:35:47 -0400
+Processing by AdminUsersController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 752)
+
+
+  
+SyntaxError (C:/Work/CodeTest/MyApp/app/models/admin_user.rb:25: syntax error, unexpected =>, expecting keyword_end
+				  :format=>{:with=>EMAIL_REGX}	
+				         ^~):
+  
+app/models/admin_user.rb:25: syntax error, unexpected =>, expecting keyword_end
+app/models/admin_user.rb:25: syntax error, unexpected =>, expecting keyword_end
+app/models/admin_user.rb:25: syntax error, unexpected =>, expecting keyword_end
+app/controllers/admin_users_controller.rb:4:in `index'
+Started GET "/admin_users" for ::1 at 2020-09-02 12:36:33 -0400
+Processing by AdminUsersController#index as HTML
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mAdminUser Load (27.4ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` ORDER BY created_at asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/admin_users/index.html.erb:26
+  Rendered admin_users/index.html.erb within layouts/application (Duration: 73.2ms | Allocations: 8690)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 344ms (Views: 293.2ms | ActiveRecord: 34.3ms | Allocations: 30304)
+
+
+Started GET "/admin_users/new" for ::1 at 2020-09-02 12:36:42 -0400
+Processing by AdminUsersController#new as HTML
+  Rendering admin_users/new.html.erb within layouts/application
+  Rendered application/_error_messages.html.erb (Duration: 1.8ms | Allocations: 206)
+  Rendered admin_users/_manageAdmin.html.erb (Duration: 12.6ms | Allocations: 2091)
+  Rendered admin_users/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 2930)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 230ms (Views: 224.7ms | ActiveRecord: 0.0ms | Allocations: 22603)
+
+
+Started POST "/admin_users" for ::1 at 2020-09-02 12:37:16 -0400
+Processing by AdminUsersController#create as HTML
+  Parameters: {"authenticity_token"=>"X9h4vmLm8+AonYvnMzZncbsO07WEE7qRMQMq4++6gbQ+ZJSMM8Or85Wemo2CmfqEMTIYxefJJ41QFM0kWuMVig==", "admin_user"=>{"first_name"=>"Rahul", "last_name"=>"Menon", "username"=>"RMenon", "email"=>"c.nibi123@gmail", "password"=>"[FILTERED]"}, "commit"=>"Create"}
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :username attribute in AdminUser model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at C:/Work/CodeTest/MyApp/app/controllers/admin_users_controller.rb:15)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[36mAdminUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`username` = BINARY 'RMenon' LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :email attribute in AdminUser model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at C:/Work/CodeTest/MyApp/app/controllers/admin_users_controller.rb:15)
+  [1m[36mAdminUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`email` = BINARY 'c.nibi123@gmail' LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  Rendering admin_users/new.html.erb within layouts/application
+  Rendered application/_error_messages.html.erb (Duration: 5.8ms | Allocations: 588)
+  Rendered admin_users/_manageAdmin.html.erb (Duration: 9.6ms | Allocations: 1833)
+  Rendered admin_users/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2211)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 200ms (Views: 169.1ms | ActiveRecord: 3.2ms | Allocations: 28203)
+
+
+Started POST "/admin_users" for ::1 at 2020-09-02 12:37:42 -0400
+Processing by AdminUsersController#create as HTML
+  Parameters: {"authenticity_token"=>"83IHj1HODmYi275ksgftHtYjYVE20y5YHVPGXBZEJ4tiIQCHumfazGXKiaFiLFXhqS243qKSRZSI0LhQzMF6uw==", "admin_user"=>{"first_name"=>"Rahul", "last_name"=>"Menon", "username"=>"RMenon", "email"=>"c.nibi123@gmail", "password"=>"[FILTERED]"}, "commit"=>"Create"}
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :username attribute in AdminUser model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at C:/Work/CodeTest/MyApp/app/controllers/admin_users_controller.rb:15)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[36mAdminUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`username` = BINARY 'RMenon' LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :email attribute in AdminUser model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at C:/Work/CodeTest/MyApp/app/controllers/admin_users_controller.rb:15)
+  [1m[36mAdminUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`email` = BINARY 'c.nibi123@gmail' LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  Rendering admin_users/new.html.erb within layouts/application
+  Rendered application/_error_messages.html.erb (Duration: 0.4ms | Allocations: 159)
+  Rendered admin_users/_manageAdmin.html.erb (Duration: 3.4ms | Allocations: 1400)
+  Rendered admin_users/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1764)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 769ms (Views: 188.5ms | ActiveRecord: 2.0ms | Allocations: 26269)
+
+
+Started POST "/admin_users" for ::1 at 2020-09-02 12:37:57 -0400
+Processing by AdminUsersController#create as HTML
+  Parameters: {"authenticity_token"=>"x0I0kfR6RmujielTzNZo1Fosb/5FPUQyIl/EAYrk8cFWETOZH9OSweSY3pYc/dArJSK2cdF8L/633LoNUGGs8Q==", "admin_user"=>{"first_name"=>"Rahul", "last_name"=>"Menon", "username"=>"RMenon", "email"=>"c.nibi123@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create"}
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :username attribute in AdminUser model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at C:/Work/CodeTest/MyApp/app/controllers/admin_users_controller.rb:15)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[36mAdminUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`username` = BINARY 'RMenon' LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :email attribute in AdminUser model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at C:/Work/CodeTest/MyApp/app/controllers/admin_users_controller.rb:15)
+  [1m[36mAdminUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`email` = BINARY 'c.nibi123@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[36mAdminUser Create (28.8ms)[0m  [1m[32mINSERT INTO `admin_users` (`first_name`, `last_name`, `email`, `username`, `created_at`, `updated_at`, `password_digest`) VALUES ('Rahul', 'Menon', 'c.nibi123@gmail.com', 'RMenon', '2020-09-02 16:37:57.993408', '2020-09-02 16:37:57.993408', '$2a$12$rdudkwGpY5CqBCeE.7Jl4u3Ch3E9HdOOrojnuPbxWBK4v5KdFsrky')[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+Redirected to http://localhost:3000/admin_users
+Completed 302 Found in 631ms (ActiveRecord: 33.7ms | Allocations: 5658)
+
+
+Started GET "/admin_users" for ::1 at 2020-09-02 12:37:58 -0400
+Processing by AdminUsersController#index as HTML
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mAdminUser Load (0.9ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` ORDER BY created_at asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/admin_users/index.html.erb:26
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `admin_users`[0m
+  ↳ app/views/admin_users/index.html.erb:44
+  Rendered admin_users/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 2171)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 175ms (Views: 172.0ms | ActiveRecord: 1.6ms | Allocations: 21783)
+
+
+Started GET "/admin_users" for ::1 at 2020-09-02 12:38:20 -0400
+Processing by AdminUsersController#index as HTML
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` ORDER BY created_at asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/admin_users/index.html.erb:26
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `admin_users`[0m
+  ↳ app/views/admin_users/index.html.erb:44
+  Rendered admin_users/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2168)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 179ms (Views: 175.4ms | ActiveRecord: 1.5ms | Allocations: 21754)
+
+
+Started GET "/subjects?page=1" for ::1 at 2020-09-02 12:59:06 -0400
+  [1m[35m (0.9ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by SubjectsController#index as HTML
+  Parameters: {"page"=>"1"}
+  Rendering subjects/index.html.erb within layouts/application
+  [1m[36mSubject Load (28.6ms)[0m  [1m[34mSELECT `subjects`.* FROM `subjects` LIMIT 4 OFFSET 0[0m
+  ↳ app/views/subjects/index.html.erb:25
+  [1m[36mPage Load (1.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (1.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 3[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (1.4ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 4[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[36mPage Load (1.3ms)[0m  [1m[34mSELECT `pages`.* FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  ↳ app/views/subjects/index.html.erb:30
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `subjects`[0m
+  ↳ app/views/subjects/index.html.erb:41
+  Rendered subjects/index.html.erb within layouts/application (Duration: 157.2ms | Allocations: 19743)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 364ms (Views: 303.7ms | ActiveRecord: 45.2ms | Allocations: 40928)
+
+
+Started GET "/admin" for ::1 at 2020-09-02 12:59:10 -0400
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/application
+  Rendered access/menu.html.erb within layouts/application (Duration: 2.3ms | Allocations: 311)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 166ms (Views: 161.0ms | ActiveRecord: 0.0ms | Allocations: 20163)
+
+
+Started GET "/admin_users" for ::1 at 2020-09-02 12:59:15 -0400
+Processing by AdminUsersController#index as HTML
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` ORDER BY created_at asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/admin_users/index.html.erb:26
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `admin_users`[0m
+  ↳ app/views/admin_users/index.html.erb:44
+  Rendered admin_users/index.html.erb within layouts/application (Duration: 31.7ms | Allocations: 8226)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 202ms (Views: 188.4ms | ActiveRecord: 1.8ms | Allocations: 29170)
+
+
+Started GET "/admin_users/new" for ::1 at 2020-09-02 12:59:20 -0400
+Processing by AdminUsersController#new as HTML
+  Rendering admin_users/new.html.erb within layouts/application
+  Rendered application/_error_messages.html.erb (Duration: 1.7ms | Allocations: 199)
+  Rendered admin_users/_manageAdmin.html.erb (Duration: 11.2ms | Allocations: 1886)
+  Rendered admin_users/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 2714)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 173ms (Views: 168.6ms | ActiveRecord: 0.0ms | Allocations: 22372)
+
+
+Started POST "/admin_users" for ::1 at 2020-09-02 13:00:03 -0400
+Processing by AdminUsersController#create as HTML
+  Parameters: {"authenticity_token"=>"Km5l6ezdi6DKZaPgjMXmeFot8fLH9334SsU6CxAe4vlL0onbvfjTs3dmsoo9anuN0BE6gqQt4OQr0t3MpUd2xw==", "admin_user"=>{"first_name"=>"Sreelekshmi", "last_name"=>"Suma", "username"=>"SumaSreelekshmi", "email"=>"sreejeeva16@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create"}
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :username attribute in AdminUser model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at C:/Work/CodeTest/MyApp/app/controllers/admin_users_controller.rb:15)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[36mAdminUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`username` = BINARY 'SumaSreelekshmi' LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :email attribute in AdminUser model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at C:/Work/CodeTest/MyApp/app/controllers/admin_users_controller.rb:15)
+  [1m[36mAdminUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`email` = BINARY 'sreejeeva16@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[36mAdminUser Create (5.7ms)[0m  [1m[32mINSERT INTO `admin_users` (`first_name`, `last_name`, `email`, `username`, `created_at`, `updated_at`, `password_digest`) VALUES ('Sreelekshmi', 'Suma', 'sreejeeva16@gmail.com', 'SumaSreelekshmi', '2020-09-02 17:00:04.322628', '2020-09-02 17:00:04.322628', '$2a$12$01sQ/iXvfwu/8fqdV085Q.hJoSz5HjZI/wykFH8nan3yUO6fUvuUy')[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  Rendering user_mailer/welcome_mail.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_mail.html.erb within layouts/mailer (Duration: 13.7ms | Allocations: 2759)
+UserMailer#welcome_mail: processed outbound mail in 24.4ms
+Completed 500 Internal Server Error in 1050ms (ActiveRecord: 9.5ms | Allocations: 28700)
+
+
+  
+ActionView::Template::Error (undefined method `firsr_name' for #<AdminUser:0x00000000080a2910>
+Did you mean?  first_name
+               first_name?
+               first_name=):
+    3:     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    4:   </head>
+    5:   <body>
+    6:     <h1>Welcome to my test application <%= @admin.firsr_name %> <%= @admin.last_name%></h1>
+    7:     <p>
+    8:       You have successfully signed up to my test application
+    9:       your username is: <%= @admin.username %>.<br>
+  
+app/views/user_mailer/welcome_mail.html.erb:6
+app/mailers/user_mailer.rb:5:in `welcome_mail'
+app/controllers/admin_users_controller.rb:17:in `create'
+Started GET "/admin_users" for ::1 at 2020-09-02 13:00:44 -0400
+Processing by AdminUsersController#index as HTML
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mAdminUser Load (0.9ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` ORDER BY created_at asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/admin_users/index.html.erb:26
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `admin_users`[0m
+  ↳ app/views/admin_users/index.html.erb:44
+  Rendered admin_users/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 3060)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 183ms (Views: 176.9ms | ActiveRecord: 1.6ms | Allocations: 23351)
+
+
+Started GET "/admin_users/new" for ::1 at 2020-09-02 13:00:50 -0400
+Processing by AdminUsersController#new as HTML
+  Rendering admin_users/new.html.erb within layouts/application
+  Rendered application/_error_messages.html.erb (Duration: 2.0ms | Allocations: 199)
+  Rendered admin_users/_manageAdmin.html.erb (Duration: 11.4ms | Allocations: 1810)
+  Rendered admin_users/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 2550)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 200ms (Views: 194.6ms | ActiveRecord: 0.0ms | Allocations: 22210)
+
+
+Started POST "/admin_users" for ::1 at 2020-09-02 13:01:11 -0400
+Processing by AdminUsersController#create as HTML
+  Parameters: {"authenticity_token"=>"V0KmNYVU0Jlst/fVHy2AmIoIO/R/21ood0/2XMLWq2s2/koH1HGIitG05r+ugh1tADTwhBwBxzQWWBGbd48/VQ==", "admin_user"=>{"first_name"=>"Sreelekshmi", "last_name"=>"Suma", "username"=>"SumaSreelekshmi", "email"=>"sreejeeva16@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create"}
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :username attribute in AdminUser model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at C:/Work/CodeTest/MyApp/app/controllers/admin_users_controller.rb:15)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[36mAdminUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`username` = BINARY 'SumaSreelekshmi' LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :email attribute in AdminUser model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at C:/Work/CodeTest/MyApp/app/controllers/admin_users_controller.rb:15)
+  [1m[36mAdminUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`email` = BINARY 'sreejeeva16@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  Rendering admin_users/new.html.erb within layouts/application
+  Rendered application/_error_messages.html.erb (Duration: 0.8ms | Allocations: 305)
+  Rendered admin_users/_manageAdmin.html.erb (Duration: 3.1ms | Allocations: 1552)
+  Rendered admin_users/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1926)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 730ms (Views: 188.9ms | ActiveRecord: 1.9ms | Allocations: 26898)
+
+
+Started GET "/admin" for ::1 at 2020-09-02 13:01:42 -0400
+Processing by AccessController#menu as HTML
+  Rendering access/menu.html.erb within layouts/application
+  Rendered access/menu.html.erb within layouts/application (Duration: 2.4ms | Allocations: 313)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 160ms (Views: 155.6ms | ActiveRecord: 0.0ms | Allocations: 20122)
+
+
+Started GET "/admin_users" for ::1 at 2020-09-02 13:01:44 -0400
+Processing by AdminUsersController#index as HTML
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` ORDER BY created_at asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/admin_users/index.html.erb:26
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `admin_users`[0m
+  ↳ app/views/admin_users/index.html.erb:44
+  Rendered admin_users/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2675)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 172ms (Views: 169.4ms | ActiveRecord: 1.2ms | Allocations: 22272)
+
+
+Started GET "/admin_users?page=2" for ::1 at 2020-09-02 13:01:48 -0400
+Processing by AdminUsersController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` ORDER BY created_at asc LIMIT 4 OFFSET 4[0m
+  ↳ app/views/admin_users/index.html.erb:26
+  Rendered admin_users/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1497)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 160ms (Views: 157.4ms | ActiveRecord: 0.8ms | Allocations: 21082)
+
+
+Started GET "/admin_users/6/delete" for ::1 at 2020-09-02 13:01:50 -0400
+Processing by AdminUsersController#delete as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:40:in `delete'
+  Rendering admin_users/delete.html.erb within layouts/application
+  Rendered admin_users/delete.html.erb within layouts/application (Duration: 4.1ms | Allocations: 814)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 190ms (Views: 179.1ms | ActiveRecord: 0.8ms | Allocations: 21235)
+
+
+Started DELETE "/admin_users/6" for ::1 at 2020-09-02 13:01:52 -0400
+Processing by AdminUsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MimmMBFBWLzcKMla0xg5sKdfTPi1yQ5+fD7FWGRPwq5ckRXRg5k3o4SQGL+aZ4dx2jMLuwUiWC8ESf3CGtpQKw==", "commit"=>"Delete", "id"=>"6"}
+  [1m[36mAdminUser Load (0.9ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 6 LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:45:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin_users_controller.rb:48:in `destroy'
+  [1m[36mAdminUser Destroy (7.4ms)[0m  [1m[31mDELETE FROM `admin_users` WHERE `admin_users`.`id` = 6[0m
+  ↳ app/controllers/admin_users_controller.rb:48:in `destroy'
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin_users_controller.rb:48:in `destroy'
+Redirected to http://localhost:3000/admin_users
+Completed 302 Found in 29ms (ActiveRecord: 11.6ms | Allocations: 3193)
+
+
+Started GET "/admin_users" for ::1 at 2020-09-02 13:01:53 -0400
+Processing by AdminUsersController#index as HTML
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mAdminUser Load (5.3ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` ORDER BY created_at asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/admin_users/index.html.erb:26
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `admin_users`[0m
+  ↳ app/views/admin_users/index.html.erb:44
+  Rendered admin_users/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 2170)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 201ms (Views: 192.9ms | ActiveRecord: 6.0ms | Allocations: 21790)
+
+
+Started GET "/admin_users/new" for ::1 at 2020-09-02 13:01:56 -0400
+Processing by AdminUsersController#new as HTML
+  Rendering admin_users/new.html.erb within layouts/application
+  Rendered application/_error_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered admin_users/_manageAdmin.html.erb (Duration: 4.9ms | Allocations: 1227)
+  Rendered admin_users/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1587)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 187ms (Views: 186.1ms | ActiveRecord: 0.0ms | Allocations: 21108)
+
+
+Started POST "/admin_users" for ::1 at 2020-09-02 13:02:13 -0400
+Processing by AdminUsersController#create as HTML
+  Parameters: {"authenticity_token"=>"wAgKqGQXS0ug3NKQ35GMifHU5c5eJMjuSfZ+n5stcaehtOaaNTITWB3fw/puPhF8e+guvj3+VfIo4ZlYLnTlmQ==", "admin_user"=>{"first_name"=>"Sreelekshmi", "last_name"=>"Suma", "username"=>"SumaSreelekshmi", "email"=>"sreejeeva16@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create"}
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :username attribute in AdminUser model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at C:/Work/CodeTest/MyApp/app/controllers/admin_users_controller.rb:15)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[36mAdminUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`username` = BINARY 'SumaSreelekshmi' LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :email attribute in AdminUser model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at C:/Work/CodeTest/MyApp/app/controllers/admin_users_controller.rb:15)
+  [1m[36mAdminUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`email` = BINARY 'sreejeeva16@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[36mAdminUser Create (6.0ms)[0m  [1m[32mINSERT INTO `admin_users` (`first_name`, `last_name`, `email`, `username`, `created_at`, `updated_at`, `password_digest`) VALUES ('Sreelekshmi', 'Suma', 'sreejeeva16@gmail.com', 'SumaSreelekshmi', '2020-09-02 17:02:14.460239', '2020-09-02 17:02:14.460239', '$2a$12$/ARZ/kspovxVYLMJ4Fe5k.kS2QeTpqrw3sBabx3H81I3qUg72mH8e')[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  Rendering user_mailer/welcome_mail.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_mail.html.erb within layouts/mailer (Duration: 1.8ms | Allocations: 151)
+UserMailer#welcome_mail: processed outbound mail in 26.7ms
+Delivered mail 5f4fd016812a8_3fb83b12c1065337@LT-NC.mail (4094.7ms)
+Date: Wed, 02 Sep 2020 13:02:14 -0400
+From: c.nibi123@gmail.com
+To: sreejeeva16@gmail.com
+Message-ID: <5f4fd016812a8_3fb83b12c1065337@LT-NC.mail>
+Subject: Welcome to my test application
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to my test application Sreelekshmi Suma</h1>
+    <p>
+      You have successfully signed up to my test application
+      your username is: SumaSreelekshmi.<br>
+    </p>
+    
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin_users
+Completed 302 Found in 4688ms (ActiveRecord: 9.0ms | Allocations: 10157)
+
+
+Started GET "/admin_users" for ::1 at 2020-09-02 13:02:18 -0400
+Processing by AdminUsersController#index as HTML
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` ORDER BY created_at asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/admin_users/index.html.erb:26
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `admin_users`[0m
+  ↳ app/views/admin_users/index.html.erb:44
+  Rendered admin_users/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 2675)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 170ms (Views: 167.0ms | ActiveRecord: 1.4ms | Allocations: 22300)
+
+
+Started GET "/admin_users" for ::1 at 2020-09-02 13:02:26 -0400
+Processing by AdminUsersController#index as HTML
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mAdminUser Load (1.3ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` ORDER BY created_at asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/admin_users/index.html.erb:26
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `admin_users`[0m
+  ↳ app/views/admin_users/index.html.erb:44
+  Rendered admin_users/index.html.erb within layouts/application (Duration: 20.2ms | Allocations: 2665)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 233ms (Views: 227.6ms | ActiveRecord: 2.4ms | Allocations: 22252)
+
+
+Started GET "/admin_users/5/delete" for ::1 at 2020-09-02 13:04:52 -0400
+Processing by AdminUsersController#delete as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:40:in `delete'
+  Rendering admin_users/delete.html.erb within layouts/application
+  Rendered admin_users/delete.html.erb within layouts/application (Duration: 2.4ms | Allocations: 546)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 169ms (Views: 163.5ms | ActiveRecord: 1.1ms | Allocations: 20677)
+
+
+Started DELETE "/admin_users/5" for ::1 at 2020-09-02 13:04:55 -0400
+Processing by AdminUsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NK4dA6VEV1bUQiROv1cbM9ByamT4hAQgcRr/yHM7GM0afrme/54YLZWQBT5UtKmL5xS9ZUfTvtuvNHJtHLWKDA==", "commit"=>"Delete", "id"=>"5"}
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` WHERE `admin_users`.`id` = 5 LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:45:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin_users_controller.rb:48:in `destroy'
+  [1m[36mAdminUser Destroy (3.0ms)[0m  [1m[31mDELETE FROM `admin_users` WHERE `admin_users`.`id` = 5[0m
+  ↳ app/controllers/admin_users_controller.rb:48:in `destroy'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin_users_controller.rb:48:in `destroy'
+Redirected to http://localhost:3000/admin_users
+Completed 302 Found in 16ms (ActiveRecord: 5.7ms | Allocations: 3182)
+
+
+Started GET "/admin_users" for ::1 at 2020-09-02 13:04:55 -0400
+Processing by AdminUsersController#index as HTML
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` ORDER BY created_at asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/admin_users/index.html.erb:26
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `admin_users`[0m
+  ↳ app/views/admin_users/index.html.erb:44
+  Rendered admin_users/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2168)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 204ms (Views: 200.8ms | ActiveRecord: 1.7ms | Allocations: 21794)
+
+
+Started GET "/admin_users/new" for ::1 at 2020-09-02 13:04:58 -0400
+Processing by AdminUsersController#new as HTML
+  Rendering admin_users/new.html.erb within layouts/application
+  Rendered application/_error_messages.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered admin_users/_manageAdmin.html.erb (Duration: 3.5ms | Allocations: 1227)
+  Rendered admin_users/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1587)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 157ms (Views: 155.6ms | ActiveRecord: 0.0ms | Allocations: 21103)
+
+
+Started POST "/admin_users" for ::1 at 2020-09-02 13:05:19 -0400
+Processing by AdminUsersController#create as HTML
+  Parameters: {"authenticity_token"=>"Y4xbU/6jobHEx1QXyUlfjRbFctvMb3tMX2Jrkwrk7tUCMLdhr4b5onnERX145sJ4nPm5q6+15lA+dYxUv7166w==", "admin_user"=>{"first_name"=>"Bravo", "last_name"=>"Brave", "username"=>"BraveBravo", "email"=>"c.nibi123@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create"}
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :username attribute in AdminUser model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at C:/Work/CodeTest/MyApp/app/controllers/admin_users_controller.rb:15)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[36mAdminUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`username` = BINARY 'BraveBravo' LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+DEPRECATION WARNING: Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1. To continue case sensitive comparison on the :email attribute in AdminUser model, pass `case_sensitive: true` option explicitly to the uniqueness validator. (called from create at C:/Work/CodeTest/MyApp/app/controllers/admin_users_controller.rb:15)
+  [1m[36mAdminUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM `admin_users` WHERE `admin_users`.`email` = BINARY 'c.nibi123@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[36mAdminUser Create (1.0ms)[0m  [1m[32mINSERT INTO `admin_users` (`first_name`, `last_name`, `email`, `username`, `created_at`, `updated_at`, `password_digest`) VALUES ('Bravo', 'Brave', 'c.nibi123@gmail.com', 'BraveBravo', '2020-09-02 17:05:20.421939', '2020-09-02 17:05:20.421939', '$2a$12$2VC5m54TWQtM/58ly4Rk7.TEhmno1A4cVit7g2lgwZCqQfYFuhN4S')[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin_users_controller.rb:15:in `create'
+  Rendering user_mailer/welcome_mail.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_mail.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 10)
+UserMailer#welcome_mail: processed outbound mail in 2.0ms
+Delivered mail 5f4fd0d06954d_3fb83b12b84654f4@LT-NC.mail (4026.9ms)
+Date: Wed, 02 Sep 2020 13:05:20 -0400
+From: c.nibi123@gmail.com
+To: c.nibi123@gmail.com
+Message-ID: <5f4fd0d06954d_3fb83b12b84654f4@LT-NC.mail>
+Subject: Welcome to my test application
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Welcome to my test application Bravo Brave</h1>
+    <p>
+      You have successfully signed up to my test application
+      your username is: BraveBravo.<br>
+    </p>
+    
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+Redirected to http://localhost:3000/admin_users
+Completed 302 Found in 4638ms (ActiveRecord: 4.1ms | Allocations: 8497)
+
+
+Started GET "/admin_users" for ::1 at 2020-09-02 13:05:24 -0400
+Processing by AdminUsersController#index as HTML
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mAdminUser Load (1.1ms)[0m  [1m[34mSELECT `admin_users`.* FROM `admin_users` ORDER BY created_at asc LIMIT 4 OFFSET 0[0m
+  ↳ app/views/admin_users/index.html.erb:26
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `admin_users`[0m
+  ↳ app/views/admin_users/index.html.erb:44
+  Rendered admin_users/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 2665)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 198ms (Views: 194.4ms | ActiveRecord: 1.7ms | Allocations: 22284)
+
+
