@@ -4,9 +4,7 @@ class AdminUsersController < ApplicationController
     @admins = AdminUser.all.order("created_at asc")
   end
 
-  def show
-    @admins = AdminUser.find(params[:id])
-  end
+
 
   def new
     @admins = AdminUser.new
