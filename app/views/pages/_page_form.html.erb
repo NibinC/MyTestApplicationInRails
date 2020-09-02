@@ -1,6 +1,6 @@
 
 	<table class="table table-striped">
-			<tr><td><%= f.label("Subejct")%></td><td><%= f.select(:subject_id,Subject.all.map{|i|i.id})%>
+			<tr><td><%= f.label("Subejct")%></td><td><%= f.select(:subject_id,Subject.all.map{|i|i.name})%>
 			<tr>
 				<td><%= f.label("Name")%></td><td><%=f.text_field(:name)%></td>
 			</tr>

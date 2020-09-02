@@ -2,7 +2,7 @@
 <div class="container-fluid p-3 bg-dark text-white">
 	<h1 align="center">My Test Application</h1>
 	<%= link_to("<Home>",:controller=>'access',:action=>'menu')%>
-		<div class="container admin_color" align="right">Logged in as :<%=$name%>  </div>
+		<div class="container admin_color" align="right">Logged in as :<%=session[:username]%>  </div>
 </div>
 <div>
 <%= link_to("<<<Back",subjects_path)%>
@@ -25,6 +25,6 @@
 
 </div>
 <footer id="footer">
-  <div id="footer-content">Sticky Footer</div>
+  <div id="footer-content foo">c.nibi123@gmail.com</div>
 </footer>
 </div>
