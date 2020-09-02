@@ -3,7 +3,8 @@ class SubjectsController < ApplicationController
   before_action :confirm_logged_in
 
   def index
-    @subjects = Subject.all.order("position asc")
+   # @subjects = Subject.all.order("position asc")
+   @subjects = Subject.paginate(page: params[:page], per_page: 4)
   end
 
   def show

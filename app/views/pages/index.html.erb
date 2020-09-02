@@ -4,11 +4,8 @@
 	<h1 align="center">My Test Application</h1>
 	<%= link_to("<Home>",:controller=>'access',:action=>'menu')%>
 	<%= link_to("<Back to Subject>",subjects_path)%>	
-<<<<<<< HEAD
-		<div class="container admin_color" align="right">Logged in as :<%=$name%>  </div>
-=======
 		<div class="container admin_color" align="right">Logged in as :<%=session[:username]%>  </div>
->>>>>>> Mydevelopment
+
 </div>
 <div>
 	<%= link_to("create_new_page",new_page_path(:subject_id=>@subject.id))%>
@@ -46,7 +43,7 @@
 		  <%end%>
 		</table>	
 </div>
-
+<%= will_paginate @pages %>
 <footer id="footer">
   <div id="footer-content foo">c.nibi123@gmail.com</div>
 </footer>

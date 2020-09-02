@@ -9,7 +9,9 @@
 	<%= link_to("create_new_record",:controller=>'subjects',:action=>'new')%>
 </div>
 <div class="container">
+
 	<table class="table table-hover">
+		
 		<thead class="tb_header">
 		  <tr>
 		  		<th>#</th>
@@ -36,7 +38,7 @@
 		  <%end%>
 		</table>	
 </div>
-
+<%= will_paginate @subjects %>
 <footer id="footer">
   <div id="footer-content foo">c.nibi123@gmail.com</div>
 </footer>
