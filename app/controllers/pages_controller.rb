@@ -2,7 +2,7 @@ class PagesController < ApplicationController
  before_action :confirm_logged_in
  before_action :find_subject
   def index
-    @pages = @subject.page.order("position asc")
+    @pages = @subject.page.paginate(page: params[:page], per_page: 4).order("position asc")
   end
 
   def show

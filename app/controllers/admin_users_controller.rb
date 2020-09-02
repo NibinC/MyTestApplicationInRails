@@ -1,7 +1,7 @@
 class AdminUsersController < ApplicationController
   before_action :confirm_logged_in
    def index
-    @admins = AdminUser.all.order("created_at asc")
+    @admins = AdminUser.paginate(page: params[:page], per_page: 4).order("created_at asc")
   end
 
 
