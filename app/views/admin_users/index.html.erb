@@ -1,6 +1,6 @@
 <div id="con">
 	
-<div class="container-fluid p-3 bg-dark text-white">
+<div class="container-fluid p-3 bg-dark text-white head">
 	<h1 align="center">My Test Application</h1>
 	<%= link_to("<Home>",:controller=>'access',:action=>'menu')%>
 		<div class="container admin_color" align="right">Logged in as :<%=session[:username]%>  </div>
@@ -42,7 +42,8 @@
 		</table>	
 </div>
 <%= will_paginate @admins %>
-<footer id="footer">
+
+<footer id="footer">	
 <div id="footer-content foo">c.nibi123@gmail.com</div>
 </footer>
 </div>

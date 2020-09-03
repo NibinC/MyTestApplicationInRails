@@ -31,9 +31,7 @@
 	color: green;
 	text-decoration-color: green;
 }
-.scroll{
-	overflow: scroll;
-}
+
 .admin_color{color: white;
 	font-size: 15px}
  span.status {
@@ -58,7 +56,11 @@
  	label {color: #AA0000;}
  	input {border: 1px solid red;}
  }
-
+.head
+{
+	position: relative;
+	height: 130px;
+}
 #error-explanation
 {
 	width: 400px;
@@ -84,7 +86,7 @@
 
 .adm{
 	color: black;
-	overflow: scroll;
+
 }
 .fullscreen
 {

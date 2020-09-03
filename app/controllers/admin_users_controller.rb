@@ -4,7 +4,7 @@ class AdminUsersController < ApplicationController
     @admins = AdminUser.paginate(page: params[:page], per_page: 4).order("created_at asc")
   end
 
-
+ 
 
   def new
     @admins = AdminUser.new
@@ -13,9 +13,9 @@ class AdminUsersController < ApplicationController
   def create
     @admins = AdminUser.new(admins_params)
     if(@admins.save)
-      flash[:notice]="Profile created successfully"
-      UserMailer.with(user: @admins).welcome_mail.deliver_now   
-      redirect_to(admin_users_path)
+       flash[:notice]="Profile created successfully"
+       UserMailer.welcome_mail(@admins).deliver_now
+       redirect_to(admin_users_path)
     else
       render 'new'
     end
