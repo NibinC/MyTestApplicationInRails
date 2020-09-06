@@ -11,30 +11,32 @@
 	<%= link_to("create_new_page",new_page_path(:subject_id=>@subject.id))%>
 </div>
 <div class="container">
+<h3 align="center" >Manage Page for Subject <%= @subject.name %></h3>
+</div>
+<div class="container">
 	<table class="table table-hover">
 		<thead>
 		  <tr>
-		  		<th>#</th>
+		  		
 		  		<th>Page</th>
+		  		<th>Position</th>
 		  		<th>Permalink</th>
-		  		<th>Subject No</th>
 		  		<th>Visible</th>
-		  		<th>Created</th>
-		  		<th>Updated</th>
+		  		<th>Sections</th>
+		  		<th> </th>
 		  		
 		  </tr>	
 		</thead>
 		  <% @pages.each do |page|%>
 		  <tr>
-		  		<td><%=page.position%></td>
-		  		<td><%=page.name%></td>
-		  		<td><%=page.permalink%></td>
-		  		<td><%=page.subject_id %></td>
-		  		<td><%= status_tag(page.visible)%></td>
-		  		<td><%=page.created_at.strftime("%b %d,%Y %H:%M")%></td>
 		  		
-		  		<td><%=page.updated_at.strftime("%b %d,%Y %H:%M")%></td>
+		  		<td><%=page.name%></td>
+		  		<td><%=page.position%></td>
+		  		<td><%=page.permalink%></td>
+		  		<td><%= status_tag(page.visible)%></td>
+		  		<td><%=page.section.size%></td>
 		  		<td>
+		  			<%=link_to("View Sections",sections_path(:page_id=>page.id))%>
 		  			<%=link_to("Show",page_path(page,:subject_id=>@subject.id))%>
 		  			<%=link_to("Edit",edit_page_path(page,:subject_id=>@subject.id))%>
 		  			<%=link_to("Delete",delete_page_path(page,:subject_id=>@subject.id))%>

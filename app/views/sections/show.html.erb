@@ -1,2 +1,48 @@
-<h1>Sections#show</h1>
-<p>Find me in app/views/sections/show.html.erb</p>
+<div>
+<div class="container-fluid p-3 bg-dark text-white">
+	<h1 align="center">My Test Application</h1>
+<%= link_to("<Home>",:controller=>'access',:action=>'menu')%>
+
+
+		<div class="container admin_color" align="right">Logged in as :<%=session[:username]%>  </div>
+
+</div>
+<div>
+<%= link_to("<<<Back",sections_path(:page_id=>@page.id))%>
+</div>
+<div class="container">
+	<table class="table table-striped">
+		<thead>
+			<tr> 
+				<th>Page:</th><th><%= @page.name%></th>
+			</tr>
+			<tr>
+				<th>Name:</th><th><%= @section.name%></th>
+			</tr>
+			<tr>
+				<th>Position:</th><th><%= @section.position%></th>
+			</tr>
+			<tr>
+				<th>Content Type:</th><th><%= @section.content_type%></th>
+			</tr>
+			<tr>
+				<th>Content:</th><th><%= @section.content%></th>
+			</tr>
+			<tr>
+				<th>Visible :</th><th><%= @section.visible ? 'Yes' : 'No'%></th>
+			</tr>	
+			<tr>
+				<th>Created At :</th><th><%= @section.created_at%></th>
+			</tr>
+			<tr>
+				<th>Updated At :</th><th><%= @section.updated_at%></th>
+			</tr>
+			
+		</thead>	
+	</table>
+
+</div>
+<footer id="footer">
+  <div id="footer-content foo">c.nibi123@gmail.com</div>
+</footer>
+</div>

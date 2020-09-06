@@ -3,11 +3,9 @@
 	<h1 align="center">My Test Application</h1>
 <%= link_to("<Home>",:controller=>'access',:action=>'menu')%>
 
-<<<<<<< HEAD
-		<div class="container admin_color" align="right">Logged in as :<%=$name%>  </div>
-=======
+		
 		<div class="container admin_color" align="right">Logged in as :<%=session[:username]%>  </div>
->>>>>>> Mydevelopment
+
 </div>
 <div>
 <%= link_to("<<<Back",pages_path(:subject_id=>@subject.id))%>

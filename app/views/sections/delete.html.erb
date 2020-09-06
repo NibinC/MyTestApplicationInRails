@@ -1,2 +1,23 @@
-<h1>Sections#delete</h1>
-<p>Find me in app/views/sections/delete.html.erb</p>
+<div>
+<div class="container-fluid p-3 bg-dark text-white">
+	<h1 align="center">My Test Application</h1>
+<%= link_to("<Home>",:controller=>'access',:action=>'menu')%>
+		<div class="container admin_color" align="right">Logged in as :<%=session[:username]%>  </div>
+</div>
+<div>
+<%= link_to("<<<Back",sections_path(:page_id=>@page.id))%>
+</div>
+<div class="container">
+	
+	<div align="center"><b>Delete Record</b></div>
+	<%= form_for(@section,:url=>sections_path(:subject_id=>@page.id), :method=>'delete') do |f|%>
+	<table class="table table-striped">
+		<thead><th>You Really want to delete section  <%=f.label(@section.name)%></th></thead>
+		<tr><td><%=f.submit("Delete")%></td></tr>
+	</table>
+	<%end%>
+</div>
+<footer id="footer">
+ <div id="footer-content foo">c.nibi123@gmail.com</div>
+</footer>
+</div>

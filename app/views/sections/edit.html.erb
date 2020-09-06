@@ -1,2 +1,22 @@
-<h1>Sections#edit</h1>
-<p>Find me in app/views/sections/edit.html.erb</p>
+<div>
+<div class="container-fluid p-3 bg-dark text-white">
+	<h1 align="center">My Test Application</h1>
+<%= link_to("<Home>",:controller=>'access',:action=>'menu')%>
+		<div class="container admin_color" align="right">Logged in as :<%=session[:username]%>  </div>
+</div>
+<div>
+<%= link_to("<<<Back",sections_path(:page_id=>@page.id))%>
+</div>
+<div class="container">
+	<%= form_for(@section,:url=>section_path(:page_id=>@page.id)) do |f|%>
+	<div align="center"><b>UPDATE SECTION</b></div>
+	<%= render(:partial=>'section_form',:locals=>{:f=>f})%>
+	<div class="justify-content-center" align="center">
+		<%=f.submit("Update")%>
+	 </div>
+	<% end%>
+</div>
+<footer id="footer">
+  <div id="footer-content foo">c.nibi123@gmail.com</div>
+</footer>
+</div>

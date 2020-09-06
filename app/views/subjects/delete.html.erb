@@ -12,7 +12,7 @@
 	<div align="center"><b>Delete Record</b></div>
 	<%= form_for(@subject, :method=>'delete') do |f|%>
 	<table class="table table-striped">
-		<thead><th>You Really want to delete <%=f.label(@subject.name)%></th></thead>
+		<thead><th>You Really want to delete Subject <%=f.label(@subject.name)%></th></thead>
 		<tr><td><%=f.submit("Delete")%></td></tr>
 	</table>
 	<%end%>

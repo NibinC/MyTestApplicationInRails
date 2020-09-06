@@ -1,14 +1,17 @@
 
 	<table class="table table-striped">
-			<tr><td><%= f.label("Subejct")%></td><td><%= f.select(:subject_id,Subject.all.map{|i|i.id})%>
+			<tr><td><%= f.label("Page")%></td><td><%= f.select(:page_id,Page.all.map{|i|i.id})%></td></tr>
 			<tr>
 				<td><%= f.label("Name")%></td><td><%=f.text_field(:name)%></td>
 			</tr>
 			<tr>
-				<td><%= f.label("Permalink")%></td><td><%=f.text_field(:permalink)%></td>
+				<td><%= f.label("Position")%></td><td><%=f.text_field(:position)%></td>
 			</tr>
 			<tr>
-				<td><%= f.label("Position")%></td><td><%=f.text_field(:position)%></td>
+				<td><%= f.label("Content Type")%></td><td><%=f.select(:content_type,["html","text"])%></td>
+			</tr>
+			<tr>
+				<td><%= f.label("Content")%></td><td><%=f.text_area(:content)%></td>
 			</tr>
 			<tr>
 				<td><%= f.label("Visible")%></td><td><%=f.radio_button(:visible,"true")%><%=f.label("Yes ")%>
